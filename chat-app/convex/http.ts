@@ -49,7 +49,7 @@ const handleClerkWebhook = httpAction(async (ctx, req) => {
                 console.log(`updating user ${event.data.id} with ${event.data}`);
             }
             break;
-
+            
         case 'user.updated':
             console.log(`user ${event.data.id} updated with ${event.data}`);
 
@@ -75,3 +75,5 @@ http.route({
     method: 'POST',
     handler: handleClerkWebhook
 })
+
+export default http;
